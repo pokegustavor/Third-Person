@@ -1,11 +1,11 @@
 ﻿using System;
-using PulsarPluginLoader.Chat.Commands;
+using PulsarModLoader.Chat.Commands.CommandRouter;
 
 namespace Third_Person
 {
-	public class ThirdPerson : IChatCommand
+	public class ThirdPerson : ChatCommand
 	{
-		public string[] CommandAliases()
+		public override string[] CommandAliases()
 		{
 			return new string[]
 			{
@@ -13,7 +13,7 @@ namespace Third_Person
 			};
 		}
 
-		public string Description()
+		public override string Description()
 		{
 			return "Enables/Disables Third Person";
 		}
@@ -30,7 +30,7 @@ namespace Third_Person
 
 		public static bool activated = false;
 
-		public bool Execute(string arguments, int executor)
+		public override void Execute(string arguments)
 		{
 			if (PLCameraSystem.Instance.CurrentCameraMode != null && PLCameraSystem.Instance.CurrentCameraMode.GetType() == typeof(PLCameraMode_ThirdPerson))
 			{
@@ -42,7 +42,6 @@ namespace Third_Person
 				PLCameraSystem.Instance.ChangeCameraMode(new PLCameraMode_ThirdPerson());
 				activated = true;
 			}
-			return false;
 		}
 	}
 }

@@ -443,8 +443,8 @@ public class PLCameraMode_ThirdPerson : PLCameraMode_GameBase
 
 	private float TimeSinceTargetChange;
 
-	private float ThirdPerson_Dist = 1f;
+	private static float ThirdPerson_Dist = 1f;
 
-	private float ThirdPerson_Side = 0f;
+	private static float ThirdPerson_Side = 0f;
 }
 

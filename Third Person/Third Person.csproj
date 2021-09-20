@@ -49,8 +49,8 @@
     <Reference Include="PLInputBase">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\PLInputBase.dll</HintPath>
     </Reference>
-    <Reference Include="PulsarPluginLoader">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\PulsarPluginLoader.dll</HintPath>
+    <Reference Include="PulsarModLoader">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\PulsarModLoader.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,7 +79,7 @@
     <Compile Include="Command.cs" />
     <Compile Include="Patch.cs" />
     <Compile Include="PLCameraMode_ThirdPerson.cs" />
-    <Compile Include="Plugin.cs" />
+    <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +93,7 @@
     <Error Condition="!Exists('..\packages\OpenSesame.Net.Compilers.Toolset.3.7.0\build\OpenSesame.Net.Compilers.Toolset.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenSesame.Net.Compilers.Toolset.3.7.0\build\OpenSesame.Net.Compilers.Toolset.props'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>SET PLUGIN_DIR="C:\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\Plugins\"
+    <PostBuildEvent>SET PLUGIN_DIR="C:\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\Mods\"
 
 IF EXIST %25PLUGIN_DIR%25 (
     ECHO Copying DLLs to Plugins directory...

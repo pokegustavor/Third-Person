@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader;
+﻿using PulsarModLoader;
 
 namespace Third_Person
 {
-    public class Plugin : PulsarPlugin
+    public class Mod : PulsarMod
     {
         public override string Version => "1.0";
 
