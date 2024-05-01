@@ -1,12 +1,13 @@
 ﻿using PulsarModLoader;
+using PulsarModLoader.Keybinds;
 
 namespace Third_Person
 {
-    public class Mod : PulsarMod
+    public class Mod : PulsarMod, IKeybind
     {
-        public override string Version => "1.0";
+        public override string Version => "1.1";
 
-        public override string Author => "Dunk";
+        public override string Author => "Dunk, Pokegustavo";
 
         public override string ShortDescription => "Allows to play in third person";
 
@@ -16,5 +17,11 @@ namespace Third_Person
         {
             return "Dunk.ThirdPerson";
         }
+
+        public void RegisterBinds(KeybindManager manager)
+        {
+            manager.NewBind("ThirdPerson", "ThirdPersonButton", "Basics", "Insert");
+        }
+
     }
 }
